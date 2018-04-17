@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css 形状</title>
+</head>
+<style>
+  /*居中*/
+  .center-box {
+    display: block;
+    margin: 60px auto;
+  }
+  /*太极*/
+  .taiji {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 60px;
+    border: solid 2px #666;
+    border-bottom-width: 62px;
+    border-radius: 100%;
+  }
+  .taiji::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border: solid 25px #666;
+    background: #fff;
+    border-radius: 100%;
+  }
+  .taiji::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border: solid 25px #fff;
+    background: #666;
+    border-radius: 100%;
+  }
+
+  /*箭头*/
+  .arrow {
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: solid 10px transparent;
+    border-right: solid 10px red;
+    transform: rotate(10deg);
+  }
+  .arrow::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -13px;
+    display: block;
+    width: 14px;
+    height: 12px;
+    border-top: solid 3px red;
+    border-radius: 20px 0 0 0;
+    transform: rotate(45deg);
+
+  }
+  /*facebook*/
+  .facebook {
+    position: relative;
+    display: block;
+    text-indent: -999em;
+    width: 100px;
+    height: 110px;
+    overflow: hidden;
+    background: red;
+    border:solid red;
+    border-width: 15px 15px 0;
+    border-radius: 5px;
+  }
+  .facebook::before {
+    content: "";
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    width: 40px;
+    height: 90px;
+    border: solid 20px #eee;
+    border-radius: 25px;
+  }
+  .facebook::after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    width: 55px;
+    height: 20px;
+    background: #eee;
+  }
+  /*月牙*/
+  .moon {
+    position: relative;
+    left: -15px;
+    top: -15px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    box-shadow: 15px 15px 0 0 red;
+  }
+  /*tv*/
+  .tv {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border-radius: 50% /10%;
+    background: red;
+  }
+  .tv::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: -5%;
+    right: -5%;
+    border-radius: 4.7% / 50%;
+    background: red;
+  }
+  /*egg*/
+  .egg {
+    width: 150px;
+    height: 200px;
+    background: red;
+    border-radius: 50% / 60% 60% 40% 40%;
+  }
+</style>
+<body>
+<!--太极 taiji-->
+<div class="taiji center-box"></div>
+<!--箭头-->
+<div class="arrow center-box"></div>
+<!--facebook-->
+<div class="facebook center-box"></div>
+<!--月牙-->
+<div class="moon center-box"></div>
+<!--tv-->
+<div class="tv center-box"></div>
+<!--egg-->
+<div class="egg center-box"></div>
+</body>
+</html>
